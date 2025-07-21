@@ -42,13 +42,9 @@ jobs:
         shell: bash
         run: |
           echo 'Replace this block with your actual build commands if using manual build mode'
-          echo 'Example:'
-          echo '  npm install'
-          echo '  npm run build'
           exit 1
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
         with:
           category: "/language:${{ matrix.language }}"
-
